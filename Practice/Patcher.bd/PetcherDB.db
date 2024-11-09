@@ -1,0 +1,868 @@
+{
+  "author": "Unnamed",
+  "title": "petcherDB",
+  "date": "2024-07-30T05:33:00.133Z",
+  "tables": [
+    {
+      "id": 0,
+      "name": "User",
+      "x": -588.5948809462924,
+      "y": 1306.6987296725954,
+      "fields": [
+        {
+          "name": "id_user",
+          "type": "INT",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": 0
+        },
+        {
+          "name": "user_name",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 1,
+          "size": 255
+        },
+        {
+          "name": "user_login",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 2,
+          "size": 255
+        },
+        {
+          "name": "user_email",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 3,
+          "size": 255
+        },
+        {
+          "name": "user_password",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 4,
+          "size": 255
+        },
+        {
+          "name": "user_description",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 5,
+          "size": 255
+        },
+        {
+          "name": "user_url",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 6,
+          "size": 255
+        }
+      ],
+      "comment": "",
+      "indices": [
+        {
+          "id": 0,
+          "name": "User_index_0",
+          "unique": false,
+          "fields": [
+            "id_user"
+          ]
+        }
+      ],
+      "color": "#6360f7",
+      "key": 1719129884580
+    },
+    {
+      "id": 1,
+      "name": "Role",
+      "x": -1183.347742326392,
+      "y": 632.054507763521,
+      "fields": [
+        {
+          "name": "id_role",
+          "type": "INT",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": 0
+        },
+        {
+          "name": "role_name",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 1,
+          "size": 255
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "color": "#ff9159",
+      "key": 1719136526183
+    },
+    {
+      "id": 2,
+      "name": "User_role",
+      "x": -1219.4394526032977,
+      "y": 1334.857814554191,
+      "fields": [
+        {
+          "name": "id_user_role",
+          "type": "INT",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": 0
+        },
+        {
+          "name": "role_id",
+          "type": "INT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 1
+        },
+        {
+          "name": "user_id",
+          "type": "INT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 2
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "color": "#6360f7",
+      "key": 1719142269095
+    },
+    {
+      "id": 3,
+      "name": "Skill",
+      "x": -193.16634685126246,
+      "y": 503.5822652189785,
+      "fields": [
+        {
+          "name": "id_skill",
+          "type": "INT",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": 0
+        },
+        {
+          "name": "skill_name",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 1,
+          "size": 255
+        },
+        {
+          "name": "role_id",
+          "type": "INT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 2,
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "color": "#3cde7d",
+      "key": 1719142545093
+    },
+    {
+      "id": 4,
+      "name": "User_skill",
+      "x": 89.0352464896041,
+      "y": 1305.2984302674586,
+      "fields": [
+        {
+          "name": "id_user_skill",
+          "type": "INT",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": 0
+        },
+        {
+          "name": "skill_id",
+          "type": "INT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 1
+        },
+        {
+          "name": "user_id",
+          "type": "INT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 2
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "color": "#89e667",
+      "key": 1719142920515
+    },
+    {
+      "id": 5,
+      "name": "Project",
+      "x": -606.9378742886253,
+      "y": 822.1123200095866,
+      "fields": [
+        {
+          "name": "id_project",
+          "type": "INT",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": 0
+        },
+        {
+          "name": "project_name",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 1,
+          "size": 255
+        },
+        {
+          "name": "project_description",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 2,
+          "size": 255
+        },
+        {
+          "name": "project_comment",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 3,
+          "size": 255
+        },
+        {
+          "name": "teamlead_id",
+          "type": "INT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 4,
+          "size": 255
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "color": "#175e7a",
+      "key": 1719143337385
+    },
+    {
+      "id": 6,
+      "name": "Platform",
+      "x": -222.3670956649321,
+      "y": 944.8979984831715,
+      "fields": [
+        {
+          "name": "id_platform",
+          "type": "INT",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": 0
+        },
+        {
+          "name": "platform_name",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 1,
+          "size": 255
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "color": "#bc49c4",
+      "key": 1719144851895
+    },
+    {
+      "id": 7,
+      "name": "Project_platform",
+      "x": -195.46918108330283,
+      "y": 707.6392829848083,
+      "fields": [
+        {
+          "name": "id_project_platform",
+          "type": "INT",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": 0
+        },
+        {
+          "name": "project_id",
+          "type": "INT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 1
+        },
+        {
+          "name": "platform_id",
+          "type": "INT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 2
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "color": "#ff4f81",
+      "key": 1719145043298
+    },
+    {
+      "id": 8,
+      "name": "Project_role",
+      "x": -1088.1823468157645,
+      "y": 821.73654348439,
+      "fields": [
+        {
+          "name": "id_project_role",
+          "type": "INT",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": 0
+        },
+        {
+          "name": "role_id",
+          "type": "INT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 1
+        },
+        {
+          "name": "project_id",
+          "type": "INT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 2
+        },
+        {
+          "name": "need_role",
+          "type": "BOOLEAN",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 3,
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "color": "#89e667",
+      "key": 1719148120364
+    },
+    {
+      "id": 9,
+      "name": "Project_user",
+      "x": -965.9102480539327,
+      "y": 1089.5689339823175,
+      "fields": [
+        {
+          "name": "id_project_user",
+          "type": "INT",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": 0
+        },
+        {
+          "name": "project_id",
+          "type": "INT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 1
+        },
+        {
+          "name": "user_role_id",
+          "type": "INT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 2
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "color": "#a751e8",
+      "key": 1719148292560
+    },
+    {
+      "id": 10,
+      "name": "Response",
+      "x": -218.92095485292703,
+      "y": 1154.7777363249922,
+      "fields": [
+        {
+          "name": "id_response",
+          "type": "INT",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": 0
+        },
+        {
+          "name": "project_id",
+          "type": "INT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 1
+        },
+        {
+          "name": "user_id",
+          "type": "INT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 2
+        },
+        {
+          "name": "state",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 3,
+          "size": 255
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "color": "#32c9b0",
+      "key": 1719148414691
+    },
+    {
+      "id": 11,
+      "name": "Favorites",
+      "x": -636.0233070233987,
+      "y": 1106.2315601066591,
+      "fields": [
+        {
+          "name": "id_favorite",
+          "type": "INT",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": 0
+        },
+        {
+          "name": "user_id",
+          "type": "INT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 1,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "project_id",
+          "type": "INT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 2,
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "color": "#ff9159",
+      "key": 1722315980189
+    }
+  ],
+  "relationships": [
+    {
+      "startTableId": 2,
+      "startFieldId": 2,
+      "endTableId": 0,
+      "endFieldId": 0,
+      "cardinality": "Один к одному",
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "User_id_user_fk",
+      "id": 0
+    },
+    {
+      "startTableId": 2,
+      "startFieldId": 1,
+      "endTableId": 1,
+      "endFieldId": 0,
+      "cardinality": "Один к одному",
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "User_role_role_id_fk",
+      "id": 1
+    },
+    {
+      "startTableId": 4,
+      "startFieldId": 2,
+      "endTableId": 0,
+      "endFieldId": 0,
+      "cardinality": "Один к одному",
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "User_skill_user_id_fk",
+      "id": 2
+    },
+    {
+      "startTableId": 4,
+      "startFieldId": 1,
+      "endTableId": 3,
+      "endFieldId": 0,
+      "cardinality": "Один к одному",
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "User_skill_skill_id_fk",
+      "id": 3
+    },
+    {
+      "startTableId": 5,
+      "startFieldId": 4,
+      "endTableId": 0,
+      "endFieldId": 0,
+      "cardinality": "Один к одному",
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "Project_teamlead_id_fk",
+      "id": 4
+    },
+    {
+      "startTableId": 7,
+      "startFieldId": 1,
+      "endTableId": 5,
+      "endFieldId": 0,
+      "cardinality": "Один к одному",
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "Project_platform_project_id_fk",
+      "id": 5
+    },
+    {
+      "startTableId": 7,
+      "startFieldId": 2,
+      "endTableId": 6,
+      "endFieldId": 0,
+      "cardinality": "Один к одному",
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "Project_platform_platform_id_fk",
+      "id": 6
+    },
+    {
+      "startTableId": 8,
+      "startFieldId": 2,
+      "endTableId": 5,
+      "endFieldId": 0,
+      "cardinality": "Один к одному",
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "Project_role_project_id_fk",
+      "id": 7
+    },
+    {
+      "startTableId": 8,
+      "startFieldId": 1,
+      "endTableId": 1,
+      "endFieldId": 0,
+      "cardinality": "Один к одному",
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "Project_role_role_id_fk",
+      "id": 8
+    },
+    {
+      "startTableId": 9,
+      "startFieldId": 1,
+      "endTableId": 5,
+      "endFieldId": 0,
+      "cardinality": "Один к одному",
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "Project_user_project_id_fk",
+      "id": 9
+    },
+    {
+      "startTableId": 2,
+      "startFieldId": 0,
+      "endTableId": 9,
+      "endFieldId": 2,
+      "cardinality": "Один к одному",
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "User_role_id_user_role_fk",
+      "id": 10
+    },
+    {
+      "startTableId": 10,
+      "startFieldId": 2,
+      "endTableId": 0,
+      "endFieldId": 0,
+      "cardinality": "Один к одному",
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "Response_user_id_fk",
+      "id": 11
+    },
+    {
+      "startTableId": 10,
+      "startFieldId": 1,
+      "endTableId": 5,
+      "endFieldId": 0,
+      "cardinality": "Один к одному",
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "Response_project_id_fk",
+      "id": 12
+    },
+    {
+      "startTableId": 11,
+      "startFieldId": 1,
+      "endTableId": 0,
+      "endFieldId": 0,
+      "cardinality": "Один к одному",
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "Favorites_user_id_fk",
+      "id": 13
+    },
+    {
+      "startTableId": 11,
+      "startFieldId": 2,
+      "endTableId": 5,
+      "endFieldId": 0,
+      "cardinality": "Один к одному",
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "Favorites_project_id_fk",
+      "id": 14
+    },
+    {
+      "startTableId": 3,
+      "startFieldId": 2,
+      "endTableId": 1,
+      "endFieldId": 0,
+      "cardinality": "Один к одному",
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "Skill_role_id_fk",
+      "id": 15
+    }
+  ],
+  "notes": [],
+  "subjectAreas": [],
+  "database": "generic",
+  "types": []
+}
